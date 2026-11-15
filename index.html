@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Mom's TV">
+<meta name="theme-color" content="#1a120c">
+<title>Mom's TV</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stage">
+  <div class="cabinet">
+    <div class="bezel">
+      <main class="screen" id="screen"></main>
+    </div>
+    <div class="panel">
+      <div class="plate" id="plate" aria-hidden="true">MOM'S TV</div>
+      <button class="back hidden" id="back" type="button">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#17110c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+        Back
+      </button>
+      <div class="grille" aria-hidden="true"></div>
+      <div class="knob" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+
+<div id="player">
+  <video id="video" playsinline webkit-playsinline preload="auto"></video>
+  <div id="pctl">
+    <div class="p-top">
+      <button class="p-back" id="pBack" type="button">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#17110c" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+        Back
+      </button>
+      <div class="p-title" id="pTitle"></div>
+    </div>
+    <div class="p-mid">
+      <button class="p-rew" id="pRew" type="button" aria-label="Go back 30 seconds">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#f6edcf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path></svg>
+        30 sec
+      </button>
+      <button class="p-big" id="pPlay" type="button" aria-label="Play or pause"></button>
+      <div class="p-spacer" aria-hidden="true"></div>
+    </div>
+    <div class="p-bottom">
+      <div class="p-bar"><div class="p-fill" id="pFill"></div></div>
+      <div class="p-time" id="pTime"></div>
+    </div>
+  </div>
+  <div class="p-msg" id="pMsg"></div>
+</div>
+
+<input type="file" id="picker" multiple accept=".mp4,.m4v,.jpg,.jpeg,video/mp4,image/jpeg">
+
+<script src="app.js"></script>
+</body>
+</html>
